@@ -31,7 +31,6 @@ npm install express express-handlebars handlebars uuid
 
 git init
 git branch -M main
-git remote add origin https://github.com/ACE2209/Code_Learn_SDN302.git
 git add .
 git commit -m "first commit"
 git push -u origin main
