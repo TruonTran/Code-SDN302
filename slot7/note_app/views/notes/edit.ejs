@@ -1,0 +1,17 @@
+<h2>Sửa ghi chú</h2>
+
+<form action="/notes/<%= note._id %>?_method=PUT" method="POST">
+  <label>Tiêu đề</label><br />
+  <input
+    type="text"
+    name="title"
+    value="<%= note.title %>"
+    required
+  /><br /><br />
+
+  <label>Nội dung</label><br />
+  <textarea name="content" rows="5" required><%= note.content %></textarea
+  ><br /><br />
+
+  <button type="submit">Cập nhật</button>
+</form>

@@ -1,0 +1,16 @@
+<h2><%= note.title %></h2>
+
+<p><%= note.content %></p>
+
+<a href="/notes/<%= note._id %>/edit">Sửa</a>
+
+<form
+  action="/notes/<%= note._id %>?_method=DELETE"
+  method="POST"
+  style="display: inline"
+>
+  <button type="submit">Xóa</button>
+</form>
+
+<br /><br />
+<a href="/">← Quay lại</a>

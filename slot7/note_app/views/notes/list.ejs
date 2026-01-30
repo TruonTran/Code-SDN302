@@ -1,0 +1,16 @@
+<h2>Danh sách ghi chú</h2>
+
+<% if (notes.length === 0) { %>
+  <p>Chưa có ghi chú nào</p>
+<% } %>
+
+<ul>
+  <% notes.forEach(note => { %>
+    <li>
+      <a href="/notes/<%= note._id %>">
+        <strong><%= note.title %></strong>
+      </a>
+      <small> - <%= note.createdAt.toLocaleDateString() %></small>
+    </li>
+  <% }) %>
+</ul>

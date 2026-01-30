@@ -1,0 +1,17 @@
+{{! Trang hiển thị chi tiết nhiệm vụ }}
+
+<div class="task-detail-card">
+  <h2>Chi tiết nhiệm vụ: {{task.name}}</h2>
+  <p><strong>Mô tả:</strong> {{task.description}}</p>
+  <p><strong>Trạng thái:</strong> {{isCompleted task.completed}}</p>
+  <hr />
+  <a href="/tasks/edit/{{task.id}}" class="edit-btn">Sửa nhiệm vụ này</a>
+  <form
+    action="/tasks/delete/{{task.id}}"
+    method="POST"
+    style="display:inline; margin-left:10px;"
+  >
+    <button type="submit" class="delete-btn">Xóa nhiệm vụ này</button>
+  </form>
+  <a href="/" style="margin-left:10px;">Quay lại danh sách</a>
+</div>

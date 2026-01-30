@@ -1,0 +1,15 @@
+{{! Trang form thêm nhiệm vụ }}
+<h2>Thêm nhiệm vụ mới</h2>
+<form action="/tasks" method="POST">
+  <div>
+    <label for="name">Tên nhiệm vụ:</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+  <div>
+    <label for="description">Mô tả:</label>
+    <textarea id="description" name="description" rows="4"></textarea>
+  </div>
+  <div>
+    <button type="submit">Thêm nhiệm vụ</button>
+  </div>
+</form>
