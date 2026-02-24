@@ -1,0 +1,69 @@
+<!-- /**
+ * @file details.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 9/2/2026
+ * @description Giao diện hiển thị chi tiết bài quiz
+ */ -->
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-4" style="max-width: 800px">
+
+  <!-- Quiz Info -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title mb-2"><%= quiz.title %></h3>
+
+      <% if (quiz.description) { %>
+        <p class="card-text text-muted">
+          <%= quiz.description %>
+        </p>
+      <% } else { %>
+        <p class="text-muted fst-italic">No description</p>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Questions -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title mb-3">
+        Questions
+        <span class="badge bg-secondary">
+          <%= quiz.questions.length %>
+        </span>
+      </h5>
+
+      <% if (quiz.questions.length === 0) { %>
+        <div class="alert alert-info">
+          This quiz has no questions yet.
+        </div>
+      <% } else { %>
+        <ul class="list-group list-group-numbered">
+          <% quiz.questions.forEach(q => { %>
+            <li class="list-group-item">
+              <%= q.text %>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="d-flex gap-2">
+    <a href="/quizzes" class="btn btn-secondary">
+      Back
+    </a>
+
+    <a
+      href="/quizzes/<%= quiz._id %>/edit"
+      class="btn btn-outline-primary"
+    >
+      Edit Quiz
+    </a>
+  </div>
+
+</div>
+
+<%- include("../layouts/footer.ejs") %>

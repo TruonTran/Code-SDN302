@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Giới thiệu về Node.js và Express",
+    "author": "Nguyễn Văn A",
+    "content": "Node.js là một môi trường chạy JavaScript mã nguồn mở, đa nền tảng, được xây dựng trên công cụ JavaScript V8 của Google Chrome. Express.js là một framework ứng dụng web tối giản và linh hoạt cho Node.js, cung cấp một bộ tính năng mạnh mẽ để phát triển các ứng dụng web và API.",
+    "description": "Tìm hiểu những điều cơ bản về Node.js và Express.js, hai công nghệ quan trọng để xây dựng ứng dụng web phía máy chủ.",
+    "isFeatured": true,
+    "createdAt": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "title": "MongoDB và Mongoose: Cẩm nang toàn diện",
+    "author": "Trần Thị B",
+    "content": "MongoDB là một cơ sở dữ liệu NoSQL dựa trên tài liệu, cung cấp khả năng mở rộng cao và hiệu suất linh hoạt. Mongoose là một thư viện ODM (Object Data Modeling) cho MongoDB và Node.js, giúp việc thao tác với dữ liệu trở nên dễ dàng và có cấu trúc hơn.",
+    "description": "Đi sâu vào cách MongoDB hoạt động và cách Mongoose giúp bạn tương tác với cơ sở dữ liệu từ ứng dụng Node.js.",
+    "isFeatured": false,
+    "createdAt": "2024-02-20T11:30:00.000Z"
+  },
+  {
+    "title": "Làm chủ Templating với Handlebars.js",
+    "author": "Lê Văn C",
+    "content": "Handlebars.js là một công cụ tạo khuôn mẫu JavaScript mạnh mẽ, giúp bạn tạo ra các trang web động một cách hiệu quả. Nó tách biệt logic  ứng dụng khỏi phần trình bày (HTML), giúp mã dễ đọc, dễ bảo trì và mở rộng hơn.",
+    "description": "Khám phá cách sử dụng Handlebars để tạo các giao diện động, sử dụng layouts, partials và custom helpers.",
+    "isFeatured": true,
+    "createdAt": "2024-03-10T09:15:00.000Z"
+  },
+  {
+    "title": "Xây dựng RESTful API với Express",
+    "author": "Phạm Thị D",
+    "content": "RESTful API là một kiến trúc tiêu chuẩn để xây dựng các dịch vụ web. Bài viết này sẽ hướng dẫn bạn từng bước cách tạo một API RESTful mạnh mẽ bằng Express.js, xử lý các phương thức HTTP khác nhau và quản lý tài nguyên.",
+    "description": "Hướng dẫn chi tiết về cách thiết kế và triển khai API RESTful sử dụng framework Express của Node.js.",
+    "isFeatured": false,
+    "createdAt": "2024-04-01T14:00:00.000Z"
+  }
+]

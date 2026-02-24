@@ -1,0 +1,23 @@
+<div class="post-detail-card">
+  <h2>{{post.title}}</h2>
+  <p class="author">Tác giả: {{post.author}}</p>
+  <p class="date">Ngày đăng: {{formatDate post.createdAt}}</p>
+  <hr />
+  <div class="post-content">
+    <p>{{post.content}}</p>
+  </div>
+  <div class="post-meta">
+    <p>Bài viết nổi bật: <strong>{{isFeatured post.isFeatured}}</strong></p>
+  </div>
+  <div class="post-actions">
+    <a href="/posts/edit/{{post._id}}" class="edit-btn">Sửa bài viết</a>
+    <form
+      action="/posts/delete/{{post._id}}"
+      method="POST"
+      style="display:inline; margin-left:10px;"
+    >
+      <button type="submit" class="delete-btn">Xóa bài viết</button>
+    </form>
+    <a href="/" style="margin-left:10px;">Quay lại danh sách</a>
+  </div>
+</div>

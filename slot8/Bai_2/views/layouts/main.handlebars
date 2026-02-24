@@ -1,0 +1,33 @@
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} - Blog Của Tôi</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1><a href="/">Blog Của Tôi</a></h1>
+      <nav>
+        <a href="/">Trang chủ</a>
+        |
+        <a href="/posts/add">Thêm bài viết</a>
+      </nav>
+    </header>
+    <main class="container">
+      {{#if success_msg}}
+        <div class="alert alert-success">{{success_msg}}</div>
+      {{/if}}
+      {{#if error_msg}}
+        <div class="alert alert-danger">{{error_msg}}</div>
+      {{/if}}
+      {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+      {{/if}}
+      {{{body}}}
+    </main>
+    <footer class="app-footer">
+      <p>&copy; {{getCurrentYear}} Blog Của Tôi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

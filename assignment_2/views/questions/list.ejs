@@ -1,0 +1,61 @@
+<!-- /**
+ * @file list.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 9/2/2026
+ * @description Giao diện hiển thị danh sách câu hỏi
+ */ -->
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-4">
+
+  <!-- Title + Create button -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="mb-0">Questions</h3>
+
+    <a href="/questions/create" class="btn btn-primary">
+      Create New Question
+    </a>
+  </div>
+
+  <!-- Question list -->
+  <ul class="list-group">
+    <% questions.forEach(q => { %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+
+        <!-- Question text -->
+        <a
+          href="/questions/<%= q._id %>"
+          class="text-decoration-none"
+        >
+          <%= q.text %>
+        </a>
+
+        <!-- Action buttons -->
+        <div>
+          <a
+            href="/questions/<%= q._id %>/edit"
+            class="btn btn-sm btn-outline-secondary me-2"
+          >
+            Edit
+          </a>
+
+          <form
+            action="/questions/<%= q._id %>/delete"
+            method="post"
+            style="display:inline"
+            onsubmit="return confirm('Delete this question?')"
+          >
+            <button class="btn btn-sm btn-danger">
+              Delete
+            </button>
+          </form>
+        </div>
+
+      </li>
+    <% }) %>
+  </ul>
+
+</div>
+
+<%- include("../layouts/footer.ejs") %>
