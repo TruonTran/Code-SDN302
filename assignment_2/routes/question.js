@@ -12,6 +12,7 @@ const https = require("https");
 
 const apiUrl = "https://localhost:3443";
 
+// Tạo một instance của axios với cấu hình để bỏ qua lỗi SSL
 const axiosInstance = axios.create({
     httpsAgent: new https.Agent({ rejectUnauthorized: false })
 });

@@ -1,0 +1,13 @@
+<!-- /**
+ * @file subjects.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 27/2/2026
+ * @description Định nghĩa view cho model Subject
+ */ -->
+
+<h2>All Subjects</h2>
+<ul>
+  <% subjects.forEach(s => { %>
+    <li><%= s.name %></li>
+  <% }) %>
+</ul>

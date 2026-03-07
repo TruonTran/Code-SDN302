@@ -1,0 +1,41 @@
+<!-- /**
+ * @file question.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 27/2/2026
+ * @description Định nghĩa view cho model Question
+ */ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Questions</title>
+</head>
+<body>
+
+<h2>All Questions</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Subject</th>
+      <th>Topic</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% questions.forEach(q => { %>
+      <tr>
+        <td><%= q.questionText %></td>
+        <td><%= q.subjectId?.name %></td>
+        <td><%= q.topicId?.name %></td>
+        <td><%= q.createdBy?.username %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+
+</table>
+
+</body>
+</html>
