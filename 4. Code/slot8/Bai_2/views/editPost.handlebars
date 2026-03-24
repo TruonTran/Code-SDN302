@@ -1,0 +1,63 @@
+<h2>Sửa bài viết: {{post.title}}</h2>
+{{#if errors}}
+  <div class="alert alert-danger">
+    {{#each errors}}
+      <p>{{this.msg}}</p>
+    {{/each}}
+  </div>
+{{/if}}
+<form action="/posts/edit/{{post._id}}" method="POST">
+  <div>
+    <label for="title">Tiêu đề:</label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      value="{{post.title}}"
+      required
+    />
+  </div>
+  <div>
+    <label for="author">Tác giả:</label>
+    <input
+      type="text"
+      id="author"
+      name="author"
+      value="{{post.author}}"
+      required
+    />
+  </div>
+  <div>
+    <label for="description">Mô tả ngắn (tối đa 200 ký tự):</label>
+    <textarea
+      id="description"
+      name="description"
+      rows="3"
+      maxlength="200"
+      required
+    >{{post.description}}</textarea>
+  </div>
+  <div>
+    <label for="content">Nội dung bài viết:</label>
+    <textarea
+      id="content"
+      name="content"
+      rows="10"
+      required
+    >{{post.content}}</textarea>
+  </div>
+  <div>
+    <label for="isFeatured">
+      <input
+        type="checkbox"
+        id="isFeatured"
+        name="isFeatured"
+        {{ifChecked post.isFeatured}}
+      />
+      Bài viết nổi bật
+    </label>
+  </div>
+  <div>
+    <button type="submit">Cập nhật bài viết</button>
+  </div>
+</form>

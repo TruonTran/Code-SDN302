@@ -1,0 +1,26 @@
+{{! Layout chính của ứng dụng }}
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} - Quản lý Nhiệm vụ</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>{{title}}</h1>
+      <nav>
+        <a href="/">Trang chủ</a>
+        |
+        <a href="/tasks/add">Thêm nhiệm vụ</a>
+      </nav>
+    </header>
+    <main class="container">
+      {{{body}}}
+    </main>
+    {{!-- <footer class="app-footer">
+      <p>&copy; {{getCurrentYear}} Simple Task Manager</p>
+    </footer> --}}
+    {{> _footer}}
+  </body>
+</html>

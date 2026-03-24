@@ -1,0 +1,21 @@
+<h1>Foods</h1>
+
+<% foods.forEach(food=>{ %>
+
+<div style="border:1px solid gray;padding:10px;margin:10px">
+
+<h3><%= food.foodName %></h3>
+
+<img src="<%= food.imageUrl %>" width="200">
+
+<p>Calories: <%= food.calories %></p>
+
+<p>Rating: <%= food.rating %></p>
+
+<p>Nation: <%= food.nation.nationName %></p>
+
+<a href="/page/foods/delete/<%= food._id %>">Delete</a>
+
+</div>
+
+<% }) %>

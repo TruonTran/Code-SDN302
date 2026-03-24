@@ -1,0 +1,102 @@
+[
+  {
+    "_id": {
+      "$oid": "75385c9be8f04013ab5ff89c"
+    },
+    "username": "user1",
+    "password": "$2b$10$dummyhash1",
+    "createdAt": {
+      "$date": "2025-07-01T08:00:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0e82894b711a49e78d7cdcea"
+    },
+    "username": "user2",
+    "password": "$2b$10$dummyhash2",
+    "createdAt": {
+      "$date": "2025-07-01T08:05:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "b228f6a0c5894d26a71deb55"
+    },
+    "username": "user3",
+    "password": "$2b$10$dummyhash3",
+    "createdAt": {
+      "$date": "2025-07-01T08:10:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "73e1ec23142049f1a356deaa"
+    },
+    "username": "user4",
+    "password": "$2b$10$dummyhash4",
+    "createdAt": {
+      "$date": "2025-07-01T08:15:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "09652dcaf22042a09c1b2395"
+    },
+    "username": "user5",
+    "password": "$2b$10$dummyhash5",
+    "createdAt": {
+      "$date": "2025-07-01T08:20:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "1222ee2d33eb45bd97c5341b"
+    },
+    "username": "user6",
+    "password": "$2b$10$dummyhash6",
+    "createdAt": {
+      "$date": "2025-07-01T08:25:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "1d54b093435c4bd48e4a42f1"
+    },
+    "username": "user7",
+    "password": "$2b$10$dummyhash7",
+    "createdAt": {
+      "$date": "2025-07-01T08:30:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "8673b9ae259d42b3a70a1b1d"
+    },
+    "username": "user8",
+    "password": "$2b$10$dummyhash8",
+    "createdAt": {
+      "$date": "2025-07-01T08:35:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "ae1892cb25204e64b40653bb"
+    },
+    "username": "user9",
+    "password": "$2b$10$dummyhash9",
+    "createdAt": {
+      "$date": "2025-07-01T08:40:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "cf30525bacc34b77aa569ba8"
+    },
+    "username": "user10",
+    "password": "$2b$10$dummyhash10",
+    "createdAt": {
+      "$date": "2025-07-01T08:45:00"
+    }
+  }
+]

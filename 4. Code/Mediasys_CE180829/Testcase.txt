@@ -1,0 +1,32 @@
+Task 1:
+   project folder: Mediasys_Studentcode
+   database named: MyMediaDB
+   collections: Users, Ratings, and Medias
+Task 2: API – POST /users/register
+   Tab Body ->raw ->JSON:
+	{ 
+	  "username": "usera",
+  	  "password": "123456"
+	}
+   Response after executing POST /users/register API to create a new user, with the password securely hashed using bcrypt:
+   http://localhost:1234/users/register
+
+Task 3: API – GET /medias
+   JSON response from the GET /medias API, displaying a list of all media items:
+   http://localhost:1234/medias
+
+
+Task 4: API – PUT /medias/:id/comment
+
+JSON response from the PUT /medias/:id/comment API, allowing a user to submit a rating and comment for a specific media item:
+
+http://localhost:1234/medias/c28690cfcb214e90973ced08/comment
+
+Example request body:
+
+{
+  "score": 5,
+  "comment": "Excellent movie with great storyline!"
+}
+
+ 

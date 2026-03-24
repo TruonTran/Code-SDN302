@@ -1,0 +1,122 @@
+[
+  {
+    "_id": {
+      "$oid": "c28690cfcb214e90973ced08"
+    },
+    "title": "Movie Title 1",
+    "description": "A sample description for movie 1.",
+    "type": "movie",
+    "image": "movie1.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T09:00:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "30ccc6cfdf5d4208934b1afc"
+    },
+    "title": "Music Title 2",
+    "description": "A sample description for music 2.",
+    "type": "music",
+    "image": "music2.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T09:10:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "c7741d3a875b4ed99648e732"
+    },
+    "title": "Movie Title 3",
+    "description": "A sample description for movie 3.",
+    "type": "movie",
+    "image": "movie3.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T09:20:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "e4e9edb2013e4d2b99123795"
+    },
+    "title": "Music Title 4",
+    "description": "A sample description for music 4.",
+    "type": "music",
+    "image": "music4.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T09:30:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "8c80714f506c413e951ed4ee"
+    },
+    "title": "Movie Title 5",
+    "description": "A sample description for movie 5.",
+    "type": "movie",
+    "image": "movie5.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T09:40:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5daa7ed07079423b88aa298d"
+    },
+    "title": "Music Title 6",
+    "description": "A sample description for music 6.",
+    "type": "music",
+    "image": "music6.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T09:50:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "78a06df8628d4518a149f41c"
+    },
+    "title": "Movie Title 7",
+    "description": "A sample description for movie 7.",
+    "type": "movie",
+    "image": "movie7.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T10:00:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "48bbc03134ff4e0189e95c9a"
+    },
+    "title": "Music Title 8",
+    "description": "A sample description for music 8.",
+    "type": "music",
+    "image": "music8.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T10:10:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "950fb566f28b45308ea67d42"
+    },
+    "title": "Movie Title 9",
+    "description": "A sample description for movie 9.",
+    "type": "movie",
+    "image": "movie9.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T10:20:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "37a2c347daeb48f2b9f1b31c"
+    },
+    "title": "Music Title 10",
+    "description": "A sample description for music 10.",
+    "type": "music",
+    "image": "music10.jpg",
+    "createdAt": {
+      "$date": "2025-07-01T10:30:00"
+    }
+  }
+]

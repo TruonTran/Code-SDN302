@@ -1,0 +1,8 @@
+{{!-- Trang chủ hiển thị danh sách nhiệm vụ --}}
+<ul class="task-list">
+    {{#each tasks}}
+        {{> _taskItem this}} 
+        {{else}}
+        <p>Chưa có nhiệm vụ nào. Hãy thêm một nhiệm vụ mới!</p>
+    {{/each}}
+</ul>

@@ -1,0 +1,40 @@
+<h2>Thêm bài viết mới</h2>
+{{#if errors}}
+ <div class="alert alert-danger">
+ {{#each errors}}
+ <p>{{this.msg}}</p>
+ {{/each}}
+ </div>
+{{/if}}
+<form action="/posts" method="POST">
+ <div>
+ <label for="title">Tiêu đề:</label>
+ <input type="text" id="title" name="title" value="{{title}}"
+required>
+ </div>
+ <div>
+ <label for="author">Tác giả:</label>
+ <input type="text" id="author" name="author" value="{{author}}"
+required>
+ </div>
+ <div>
+ <label for="description">Mô tả ngắn (tối đa 200 ký tự):</label>
+ <textarea id="description" name="description" rows="3"
+maxlength="200" required>{{description}}</textarea>
+ </div>
+ <div>
+ <label for="content">Nội dung bài viết:</label>
+ <textarea id="content" name="content" rows="10"
+required>{{content}}</textarea>
+ </div>
+ <div>
+ <label for="isFeatured">
+ <input type="checkbox" id="isFeatured" name="isFeatured" {{#if
+isFeatured}}checked{{/if}}>
+ Bài viết nổi bật
+ </label>
+ </div>
+ <div>
+ <button type="submit">Thêm bài viết</button>
+ </div>
+</form>

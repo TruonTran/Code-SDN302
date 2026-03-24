@@ -1,0 +1,4 @@
+npm install express ejs mongoose jsonwebtoken bcryptjs dotenv cors morgan ; 
+npm install -D nodemon
+npm install --save-dev nodemon
+

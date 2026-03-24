@@ -1,0 +1,72 @@
+<!-- /**
+ * @file edit.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 9/2/2026
+ * @description Giao diện chỉnh sửa bài quiz
+ */ -->
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-4" style="max-width: 700px">
+  <h3 class="mb-4">Edit Quiz</h3>
+
+  <form method="post" action="/quizzes/<%= quiz._id %>/edit">
+
+    <!-- Title -->
+    <div class="mb-3">
+      <label class="form-label fw-bold">Title</label>
+      <input
+        type="text"
+        name="title"
+        class="form-control"
+        value="<%= quiz.title %>"
+        required
+      />
+    </div>
+
+    <!-- Description -->
+    <div class="mb-4">
+      <label class="form-label fw-bold">Description</label>
+      <textarea
+        name="description"
+        class="form-control"
+        rows="3"
+      ><%= quiz.description %></textarea>
+    </div>
+
+    <!-- Questions -->
+    <div class="mb-4">
+      <label class="form-label fw-bold">Select Questions</label>
+
+      <% questions.forEach(q => { %>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="questions"
+            value="<%= q._id %>"
+            <% if (quiz.questions.some(qq => qq._id === q._id)) { %>
+              checked
+            <% } %>
+          />
+          <label class="form-check-label">
+            <%= q.text %>
+          </label>
+        </div>
+      <% }) %>
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">
+        Update Quiz
+      </button>
+      <a href="/quizzes" class="btn btn-secondary">
+        Cancel
+      </a>
+    </div>
+
+  </form>
+</div>
+
+<%- include("../layouts/footer.ejs") %>

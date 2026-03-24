@@ -1,0 +1,95 @@
+<!-- /**
+ * @file create.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 9/2/2026
+ * @description Giao diện tạo câu hỏi mới
+ */ -->
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-4" style="max-width: 700px">
+  <h3 class="mb-4">Create New Question</h3>
+
+  <form method="post" action="/questions/create">
+    <!-- Question Text -->
+    <div class="mb-3">
+      <label class="form-label">Question Text</label>
+      <input
+        type="text"
+        name="text"
+        class="form-control"
+        placeholder="Enter question text"
+        required
+      />
+    </div>
+
+    <!-- Options -->
+    <div class="mb-3">
+      <label class="form-label">Options</label>
+      <input
+        type="text"
+        name="options[]"
+        class="form-control mb-2"
+        placeholder="Option 1"
+        required
+      />
+      <input
+        type="text"
+        name="options[]"
+        class="form-control mb-2"
+        placeholder="Option 2"
+        required
+      />
+      <input
+        type="text"
+        name="options[]"
+        class="form-control mb-2"
+        placeholder="Option 3"
+      />
+      <input
+        type="text"
+        name="options[]"
+        class="form-control"
+        placeholder="Option 4"
+      />
+    </div>
+
+    <!-- Correct Answer Index -->
+    <div class="mb-3">
+      <label class="form-label">Correct Answer Index</label>
+      <input
+        type="number"
+        name="correctAnswerIndex"
+        class="form-control"
+        placeholder="0-based index (e.g. 0)"
+        required
+      />
+    </div>
+
+    <!-- Keywords -->
+    <div class="mb-4">
+      <label class="form-label">Keywords</label>
+      <input
+        type="text"
+        name="keywords[]"
+        class="form-control mb-2"
+        placeholder="Keyword 1"
+      />
+      <input
+        type="text"
+        name="keywords[]"
+        class="form-control"
+        placeholder="Keyword 2"
+      />
+    </div>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">Create</button>
+
+      <a href="/questions" class="btn btn-secondary"> Back </a>
+    </div>
+  </form>
+</div>
+
+<%- include("../layouts/footer.ejs") %>

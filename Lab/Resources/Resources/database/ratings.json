@@ -1,0 +1,162 @@
+[
+  {
+    "_id": {
+      "$oid": "01ef918f88e9460aab443a14"
+    },
+    "mediaId": {
+      "$oid": "c28690cfcb214e90973ced08"
+    },
+    "userId": {
+      "$oid": "75385c9be8f04013ab5ff89c"
+    },
+    "score": 5,
+    "comment": "Sample comment 1 on media 1.",
+    "createdAt": {
+      "$date": "2025-07-01T10:00:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "fbd3098b37374fe7b77482b8"
+    },
+    "mediaId": {
+      "$oid": "c28690cfcb214e90973ced08"
+    },
+    "userId": {
+      "$oid": "0e82894b711a49e78d7cdcea"
+    },
+    "score": 1,
+    "comment": "Sample comment 2 on media 1.",
+    "createdAt": {
+      "$date": "2025-07-01T10:07:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0ad539da845e488cb9a00f65"
+    },
+    "mediaId": {
+      "$oid": "c7741d3a875b4ed99648e732"
+    },
+    "userId": {
+      "$oid": "b228f6a0c5894d26a71deb55"
+    },
+    "score": 4,
+    "comment": "Sample comment 3 on media 3.",
+    "createdAt": {
+      "$date": "2025-07-01T10:14:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "ce8051e2aa4a4341b6e96607"
+    },
+    "mediaId": {
+      "$oid": "e4e9edb2013e4d2b99123795"
+    },
+    "userId": {
+      "$oid": "73e1ec23142049f1a356deaa"
+    },
+    "score": 5,
+    "comment": "Sample comment 4 on media 4.",
+    "createdAt": {
+      "$date": "2025-07-01T10:21:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "e34a71ec77ef4517b5cfdef0"
+    },
+    "mediaId": {
+      "$oid": "8c80714f506c413e951ed4ee"
+    },
+    "userId": {
+      "$oid": "09652dcaf22042a09c1b2395"
+    },
+    "score": 3,
+    "comment": "Sample comment 5 on media 5.",
+    "createdAt": {
+      "$date": "2025-07-01T10:28:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "7668749ef0634286b600f19a"
+    },
+    "mediaId": {
+      "$oid": "5daa7ed07079423b88aa298d"
+    },
+    "userId": {
+      "$oid": "1222ee2d33eb45bd97c5341b"
+    },
+    "score": 2,
+    "comment": "Sample comment 6 on media 6.",
+    "createdAt": {
+      "$date": "2025-07-01T10:35:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "fd9c92fef8be4570b4702768"
+    },
+    "mediaId": {
+      "$oid": "78a06df8628d4518a149f41c"
+    },
+    "userId": {
+      "$oid": "1d54b093435c4bd48e4a42f1"
+    },
+    "score": 1,
+    "comment": "Sample comment 7 on media 7.",
+    "createdAt": {
+      "$date": "2025-07-01T10:42:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "fe3c2d77458f41d4938feaa5"
+    },
+    "mediaId": {
+      "$oid": "48bbc03134ff4e0189e95c9a"
+    },
+    "userId": {
+      "$oid": "8673b9ae259d42b3a70a1b1d"
+    },
+    "score": 4,
+    "comment": "Sample comment 8 on media 8.",
+    "createdAt": {
+      "$date": "2025-07-01T10:49:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "bab8260e63364ce09c17175c"
+    },
+    "mediaId": {
+      "$oid": "950fb566f28b45308ea67d42"
+    },
+    "userId": {
+      "$oid": "ae1892cb25204e64b40653bb"
+    },
+    "score": 5,
+    "comment": "Sample comment 9 on media 9.",
+    "createdAt": {
+      "$date": "2025-07-01T10:56:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "e5322d1db3f2419ca6f34c2a"
+    },
+    "mediaId": {
+      "$oid": "37a2c347daeb48f2b9f1b31c"
+    },
+    "userId": {
+      "$oid": "cf30525bacc34b77aa569ba8"
+    },
+    "score": 1,
+    "comment": "Sample comment 10 on media 10.",
+    "createdAt": {
+      "$date": "2025-07-01T11:03:00"
+    }
+  }
+]

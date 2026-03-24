@@ -1,0 +1,112 @@
+# QUICK TEST GUIDE - CourseApp PE Exam
+
+## Project Setup Information
+
+**Project folder:** `CourseApp_StudentCode`  
+**Database name:** `CourseDB_2026`  
+**Collections:** `Users`, `Courses`, `Enrollments`  
+**Server Port:** `8386`
+
+---
+
+## ✅ Task 1: Database Setup & import Data
+
+**Objective:** Initialize MongoDB database and import data
+# Import sample_users.json, sample_courses.json, and sample_enrollments.json into CourseDB_2026
+
+
+## ✅ Task 2: API – GET /courses
+
+### Endpoint:
+
+GET "http://localhost:8386/courses"
+
+
+## ✅ Task 3: API – POST /users/register
+
+
+POST "http://localhost:8386/users/register"
+
+
+### Postman Setup:
+- **Method:** POST
+- **Tab:** Body → raw → JSON
+- **Headers:** Content-Type: application/json (auto-set)
+
+### Request Body:
+json
+{
+    "name": "Test student",
+    "email": "teststudent@course.com",
+    "password": "password123"
+}
+
+{
+    "name": "Test student",
+    "email": "teststudent@gmail.com",
+    "password": "password123",
+    "role": "intructor"
+}
+
+### Try registering the same email again: http://localhost:8386/users/register
+json
+{
+    "name": "Test student",
+    "email": "teststudent@course.com",
+    "password": "password123",
+    "role": "student"
+}
+
+
+## ✅ Task 4: API – POST /users/login
+
+**Objective:** Authenticate user and receive JWT token
+
+### Endpoint:
+
+POST http://localhost:8386/users/login
+
+json
+{
+    "email": "teststudent@course.com",
+    "password": "password123"
+}
+
+### ⚠️ IMPORTANT:
+**Save the token value from the response!** You will need it for Task 5.
+
+
+## ✅ Task 5: API – POST /enrollments
+
+**Objective:** only users with the role "student" can enroll in a course using JWT authentication
+
+### Endpoint:
+
+POST http://localhost:8386/enrollments
+
+### Postman Setup - Method 2 (Authorization Tab):
+- **Method:** POST
+- **Tab:** Body → raw → JSON
+- **Tab:** Authorization
+  - Type: `Bearer Token`
+  - Token: `<paste_token_from_task_4>` (without "Bearer" prefix)
+
+### Request Body (Copy-Paste):
+json
+{
+  "courseId": "65f100000000000000000001"
+}
+
+
+## ✅ Task 6: API – GET /users/:userId/enrollments/view (EJS)
+
+**Objective:** Render HTML page displaying detailed enrollment information of a specific student, (include: Student full name and ID, Course title, Progress percentage, Status, Enrolled date) using EJS template (No authentication required)
+
+### Endpoint:
+
+http://localhost:8386/users/65f000000000000000000003/enrollments/view
+
+** OR using newly registered user ID (from Task 3):**
+
+
+**Good luck with your exam!**

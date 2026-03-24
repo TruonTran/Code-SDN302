@@ -1,0 +1,13 @@
+<div class="post-card {{#if isFeatured}}featured-post{{/if}}">
+ <h3><a href="/posts/{{_id}}">{{title}}</a></h3>
+ <p class="author">Tác giả: {{author}}</p>
+ <p class="date">Ngày đăng: {{formatDate createdAt}}</p>
+ <p class="description">{{truncate description 150}}</p>
+ <div class="post-actions">
+ <a href="/posts/edit/{{_id}}" class="edit-btn">Sửa</a>
+ <form action="/posts/delete/{{_id}}" method="POST"
+style="display:inline;">
+ <button type="submit" class="delete-btn">Xóa</button>
+ </form>
+ </div>
+</div>

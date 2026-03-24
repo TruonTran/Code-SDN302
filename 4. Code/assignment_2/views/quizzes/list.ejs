@@ -1,0 +1,64 @@
+<!-- /**
+ * @file list.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 9/2/2026
+ * @description Giao diện hiển thị danh sách bài quiz
+ */  -->
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-4" style="max-width: 800px">
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Quiz List</h3>
+
+    <a href="/quizzes/create" class="btn btn-primary">
+      Create New Quiz
+    </a>
+  </div>
+
+  <% if (quizzes.length === 0) { %>
+    <div class="alert alert-info">
+      No quizzes available.
+    </div>
+  <% } else { %>
+    <ul class="list-group">
+      <% quizzes.forEach(q => { %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          
+          <strong><%= q.title %></strong>
+
+          <div class="d-flex gap-2">
+            <a
+              href="/quizzes/<%= q._id %>"
+              class="btn btn-sm btn-outline-secondary"
+            >
+              View
+            </a>
+
+            <a
+              href="/quizzes/<%= q._id %>/edit"
+              class="btn btn-sm btn-outline-primary"
+            >
+              Edit
+            </a>
+
+            <form
+              action="/quizzes/<%= q._id %>/delete"
+              method="post"
+              onsubmit="return confirm('Delete this quiz?')"
+            >
+              <button type="submit" class="btn btn-sm btn-outline-danger">
+                Delete
+              </button>
+            </form>
+          </div>
+
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+
+</div>
+
+<%- include("../layouts/footer.ejs") %>

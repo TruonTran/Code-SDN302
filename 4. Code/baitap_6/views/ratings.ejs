@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ratings</title>
+</head>
+
+<body>
+
+  <h1>Ratings</h1>
+
+  <% ratings.forEach(r => { %>
+
+  <p>
+    User: <%= r.userId.username %>
+    <br>
+    Rating: <%= r.rating %>
+    <br>
+    Review: <%= r.review %>
+  </p>
+
+  <% }) %>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+ Task 1: Project Setup 
+Project folder: ComputerStore_StudentCode 
+Database name: ComputerStoreDB_2026 
+Collections: Users, Products, Reviews 
+Server URL: http://localhost:1234 
+  
+ Task 2: API – POST /users/register 
+ Endpoint 
+POST http://localhost:1234/users/register 
+ Body → raw → JSON 
+{ 
+  "username": "usera", 
+  "password": "123456" 
+} 
+ Expected Result 
+• User created 
+• Password hashed 
+{ 
+  "message": "User registered successfully" 
+} 
+  
+ Task 3: API – POST /users/login 
+ Endpoint 
+POST http://localhost:1234/users/login 
+ Body 
+{ 
+  "username": "usera", 
+  "password": "123456" 
+} 
+ Expected Result 
+{ 
+  "token": "JWT_TOKEN" 
+} 
+     Save token 
+  
+ Task 4: API – POST /users/logout 
+ Endpoint 
+POST http://localhost:1234/users/logout 
+ Headers 
+Authorization: Bearer <token> 
+ Expected Result 
+{ 
+  "message": "Logged out successfully" 
+} 
+  
+ Task 5: API – GET /products 
+ Endpoint 
+GET http://localhost:1234/products 
+ Expected Result 
+[ 
+  { 
+    "_id": "66f200000000000000000001", 
+    "name": "Dell XPS 13", 
+    "brand": "Dell", 
+10/13 
+    "category": "Laptop", 
+    "price": 35000000, 
+    "averageRating": 4.8 
+  } 
+] 
+  
+ Task 6: API – GET /products/:id (Authenticated + Populate) 
+ Endpoint 
+GET http://localhost:1234/products/66f200000000000000000001 
+ Headers 
+Authorization: Bearer <token> 
+ Expected Result 
+{ 
+  "_id": "66f200000000000000000001", 
+  "name": "Dell XPS 13", 
+  "brand": "Dell", 
+  "reviews": [ 
+    { 
+      "rating": 5, 
+      "comment": "Very powerful!", 
+      "user": { 
+        "username": "alice" 
+      } 
+    } 
+  ] 
+} 
+  
+ Task 7: API – POST /products (Admin only) 
+ Endpoint 
+POST http://localhost:1234/products 
+ Headers 
+Authorization: Bearer <admin_token> 
+ Body 
+{ 
+  "name": "HP Pavilion", 
+  "brand": "HP", 
+  "category": "Laptop", 
+  "price": 20000000, 
+  "stock": 8, 
+  "specifications": { 
+    "cpu": "Intel i5", 
+    "ram": "8GB", 
+    "storage": "256GB SSD" 
+  } 
+} 
+ Expected Result 
+{ 
+  "message": "Product created successfully" 
+} 
+  
+ Task 8: API – PUT /products/:id 
+ Endpoint 
+PUT http://localhost:1234/products/66f200000000000000000001 
+ Headers 
+Authorization: Bearer <admin_token> 
+ Body 
+{ 
+  "price": 34000000, 
+  "stock": 12 
+} 
+ Expected Result 
+11/13 
+{ 
+  "message": "Product updated successfully" 
+} 
+  
+ Task 9: API – DELETE /products/:id 
+ Endpoint 
+DELETE http://localhost:1234/products/66f200000000000000000004 
+ Headers 
+Authorization: Bearer <admin_token> 
+ Expected Result 
+{ 
+  "message": "Product deleted successfully" 
+} 
+  
+ Task 10: API – POST /reviews/:productId 
+ Endpoint 
+POST http://localhost:1234/reviews/66f200000000000000000002 
+ Headers 
+Authorization: Bearer <token> 
+ Body 
+{ 
+  "rating": 5, 
+  "comment": "Excellent laptop!" 
+} 
+ Expected Result 
+{ 
+  "message": "Review added successfully" 
+} 
+  
+ Task 11: API – PUT /reviews/:id 
+ Endpoint 
+PUT http://localhost:1234/reviews/66f300000000000000000001 
+ Headers 
+Authorization: Bearer <token> 
+ Body 
+{ 
+  "rating": 4, 
+  "comment": "Updated review after using longer." 
+} 
+ Expected Result 
+{ 
+  "message": "Review updated successfully" 
+} 
+  
+ Task 12: API – DELETE /reviews/:id 
+ Endpoint 
+DELETE http://localhost:1234/reviews/66f300000000000000000001 
+ Headers 
+Authorization: Bearer <token> 
+ Expected Result 
+{ 
+  "message": "Review deleted successfully" 
+} 
+ 
+ Task 13: API – GET /reviews/myreviews 
+ Endpoint 
+GET http://localhost:1234/reviews/myreviews 
+ Headers 
+Authorization: Bearer <token> 
+ Expected Result 
+12/13 
+{ 
+  "user": "usera", 
+  "reviews": [ 
+    { 
+      "product": { 
+        "name": "MacBook Pro M2", 
+        "brand": "Apple", 
+        "category": "Laptop" 
+      }, 
+      "rating": 5, 
+      "comment": "Excellent!", 
+      "createdAt": "2026-03-20T10:00:00Z" 
+    } 
+  ] 
+} 
+ 
+ Task 14: API – GET /products/top-rated 
+ Endpoint 
+GET http://localhost:1234/products/top-rated 
+ Expected Result 
+[ 
+  { 
+    "name": "Dell XPS 13", 
+    "averageRating": 4.8 
+  } 
+] 
+  
+ Task 15: API – GET /products/most-reviewed 
+ Endpoint 
+GET http://localhost:1234/products/most-reviewed 
+ Expected Result 
+[ 
+  { 
+    "_id": "66f200000000000000000001", 
+    "reviewCount": 2 
+  } 
+] 
+ 
+ Task 16: API – GET /products/:id/statistics 
+ Endpoint 
+GET http://localhost:1234/products/66f200000000000000000001/statistics 
+ Expected Result 
+{ 
+  "averageRating": 4.8, 
+  "totalReviews": 2, 
+  "ratingDistribution": { 
+    "5": 1, 
+    "4": 1, 
+    "3": 0, 
+    "2": 0, 
+    "1": 0 
+  } 
+} 

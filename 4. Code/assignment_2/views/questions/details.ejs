@@ -1,0 +1,73 @@
+<!-- /**
+ * @file details.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 9/2/2026
+ * @description Giao diện hiển thị chi tiết câu hỏi
+ */ -->
+
+<%- include("../layouts/header.ejs") %>
+
+<div class="container mt-4" style="max-width: 700px">
+
+  <h3 class="mb-4">Question Details</h3>
+
+  <!-- Question Text -->
+  <div class="mb-3">
+    <label class="form-label fw-bold">Question Text</label>
+    <div class="form-control bg-light">
+      <%= question.text %>
+    </div>
+  </div>
+
+  <!-- Options -->
+  <div class="mb-3">
+    <label class="form-label fw-bold">Options</label>
+
+    <ul class="list-group">
+      <% question.options.forEach((opt, i) => { %>
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center
+          <%= i === question.correctAnswerIndex ? 'list-group-item-success' : '' %>"
+        >
+          <span><%= opt %></span>
+
+          <% if (i === question.correctAnswerIndex) { %>
+            <span class="badge bg-success">Correct</span>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <!-- Keywords -->
+  <div class="mb-4">
+    <label class="form-label fw-bold">Keywords</label>
+    <div>
+      <% if (question.keywords.length > 0) { %>
+        <% question.keywords.forEach(k => { %>
+          <span class="badge bg-secondary me-1"><%= k %></span>
+        <% }) %>
+      <% } else { %>
+        <span class="text-muted">No keywords</span>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="d-flex gap-2">
+    <a href="/questions" class="btn btn-secondary">
+      Back
+    </a>
+
+    <a
+      href="/questions/<%= question._id %>/edit"
+      class="btn btn-outline-primary"
+    >
+      Edit
+    </a>
+  </div>
+
+</div>
+
+<%- include("../layouts/footer.ejs") %>
+

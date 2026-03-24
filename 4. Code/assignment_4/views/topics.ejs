@@ -1,0 +1,13 @@
+<!-- /**
+ * @file topics.ejs
+ * @author Trương Ngọc Trân - CE180829
+ * @date 27/2/2026
+ * @description Định nghĩa view cho model Topic
+ */ -->
+
+<h2>All Topics</h2>
+<ul>
+  <% topics.forEach(t => { %>
+    <li><%= t.name %> - <%= t.subjectId?.name %></li>
+  <% }) %>
+</ul>
